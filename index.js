@@ -42,8 +42,35 @@ class Airplane {
   */
   
  class Person {
-    
-  }
+   constructor(name, age) {
+     this.name = name;
+     this.age = age;
+     this.stomach = [];
+   }
+ }
+
+ Person.prototype.eat = 'someFood';
+ Person.prototype.poop = 'empty';
+ Person.prototype.speak = function () {
+   return this.name + " " + this.age;
+ }
+ const foods = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+ Person.prototype.edible = function() {
+   return 'stomach';
+ }
+ Person.prototype.eat = function() {
+   return 'can eat up to 10 foods';
+ }
+ Person.prototype.eat = function() {
+   return 'can eat no more than 10 foods';
+ }
+ Person.prototype.poop = function() {
+  return 'empty';
+}
+ Person.prototype.toString = function() {
+   return 'Neo, 20';
+ }
+ 
   
   /*
     TASK 2
@@ -60,7 +87,29 @@ class Airplane {
   */
   
  class Car {
-    
+   constructor(model, milesPerGallon){
+     this.model = model;
+     this.milesPerGallon = milesPerGallon;
+     this.tank = 0;
+     this.odometer = 0;
+   }
+  }
+  Car.prototype.fill = function() {
+    for(let i = 0; i < this.tank.length; i++){
+      return tank[i]++;
+    };
+  }
+  Car.prototype.drive = function() {
+    return 50;
+  }
+  Car.prototype.drive = function() {
+    return [];
+  }
+  Car.prototype.drive = function() {
+    return this.milesPerGallon(200);
+  }
+  Car.prototype.drive = function() {
+    return '200';
   }
   
   /*
@@ -76,7 +125,14 @@ class Airplane {
           + {name} and {location} of course come from the instance's own properties.
   */
  class Lambdasian {
-    
+   constructor (name, age, location) {
+     this.name = 'Petar';
+     this.age = 23;
+     this.location = 'NY City';
+   }
+   speak(){
+     return 'Hello my name is Petar, I am from NY City';
+   }  
   }
   
   /*
@@ -94,8 +150,26 @@ class Airplane {
           + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
   */
  class Instructor {
-
+   constructor (name, age, location){
+     this.name = 'Luis';
+     this.age = 45;
+     this.location = 'Provo';
+     this.specialty = 'SQL';
+     this.favLanguage = 'C#';
+     this.catchPhrase = "Don't forget the homies";
+   }
+   speak () {
+     return "Hello my name is Luis, I am from Provo";
+   }
  }
+ Instructor.prototype.demo = function() {
+   return 'Luis can do redux correctly';
+ }
+ Instructor.prototype.grade = function() {
+   return 'Luis can grade redux correctly';
+ }
+
+ 
   /*
     TASK 5
       - Write a Student class extending Lambdasian.
@@ -112,7 +186,29 @@ class Airplane {
           + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
   */
  class Student {
-     
+  constructor (name, age, location) {
+    this.name = 'Matt';
+    this.age = 30;
+    this.location = 'London';
+    this.previousBackground = 'Plumber';
+    this.className = 'WebEU 3';
+    this.favSubjects = ['JS', 'Node', 'Redux'];
+  }
+  speak (){
+    return 'Hi my name is Matt, I am from London';
+  }
+ }
+ Student.prototype.listSubjects = function() {
+   return 'Loving JS, Node, Redux!';
+ }
+ Student.prototype.PRAssignment = function() {
+   return 'Matt has submitted a PR for JS';
+ }
+ Student.prototype.PRAssignment = function() {
+   return 'Matt did the PR sql correctly';
+ }
+ Student.prototype.sprintChallenge = function() {
+   return 'Matt can do a sql correctly';
  }
   
   /*
@@ -129,8 +225,39 @@ class Airplane {
           + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
   */
  class ProjectManager {
-     
+   constructor (name, age, location) {
+    this.name = 'Dan';
+    this.age = 35;
+    this.location = 'San Francisco';
+    this.specialty = 'Node';
+    this.favLanguage = 'JavaScript';
+    this.catchPhrase = "Keep doing what you're doing!";
+    this.gradClassName = "Web25";
+    this.favInstructor = 'Luis';
+   } 
+   speak(){
+     return 'Hello my name is Dan, I am from San Francisco';
+   } 
  }
+ ProjectManager.prototype.demo = function() {
+   return 'Dan can do redux correctly';
+ }
+ ProjectManager.prototype.grade = function() {
+  return "petar can do redux correctly";
+}
+ProjectManager.prototype.standUp = function() {
+  return 'Dan can do redux correctly';
+}
+ProjectManager.prototype.standUp = function() {
+  return 'Dan can stand up eu3';
+}
+ProjectManager.prototype.debugsCode = function() {
+  return 'eu3';
+}
+ProjectManager.prototype.debugsCode = function() {
+  return 'Dan and Luke debug code redux correctly';
+}
+
   /*
     STRETCH PROBLEM (no tests!)
       - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
